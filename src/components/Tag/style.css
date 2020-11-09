@@ -1,0 +1,13 @@
+.tag {
+    letter-spacing: 3px;
+    font-style: italic;
+    padding: 20px 40px 20px 8px;
+    font-size: 32px;
+    text-shadow: 1px 1px 2px #5dbe8a;
+    background: #ee3f4d;
+    color: white;
+    border-bottom-right-radius: 80px;
+    width: max-content;
+    margin: 0px 0px;
+    font-weight: bold;
+}

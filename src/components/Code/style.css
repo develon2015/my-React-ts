@@ -1,0 +1,26 @@
+.code {
+    background: black;
+    color: #fd971f;
+    padding: 20px 10px;
+    display: block;
+    text-align: left;
+    margin: 2px;
+    word-wrap: break-word;
+    /** 允许断字 */
+    word-break: break-all;
+}
+.line-number {
+    user-select: none;
+    color: #ae81ff;
+    display: inline-block;
+    width: 40px;
+}
+.single-comment {
+    color: #a6e22e;
+}
+.multi-comment {
+    color: #66d9ef;
+}
+.import {
+    color: #f74449;
+}

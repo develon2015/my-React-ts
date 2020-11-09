@@ -1,0 +1,26 @@
+.button {
+    display: inline-block;
+    background: transparent;
+    font-size: 32px;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    padding: 8px 20px;
+    margin: 4px;
+    min-width: 120px;
+    border-radius: 30px;
+    /* box-shadow代替outline和border, outline无法设置圆角, bordre占用空间 */
+    box-shadow: 0 0 0 2px #880088;
+    color: #880088;
+}
+.button:hover {
+    background: rgba(88, 0, 88, .5);
+    color: rgb(231, 15, 69);
+}
+.button:active {
+    /* 颜色反转 */
+    filter: invert(100%);
+    box-shadow: 0 0 20px 2px #880088;
+    background: transparent;
+    position: relative;
+}

@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "jsx": "preserve", // 防止VS Code报错，实际上我们不会使用tsc来编译，而是Babel，此处保留JSX标签
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"],
+        },
+    },
+}
