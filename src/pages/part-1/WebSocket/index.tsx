@@ -4,23 +4,36 @@ import Button from '@/components/Button';
 
 const ws = `ws://127.0.0.1:8022`;
 
-class WebsocketClient extends Component {
+class WebsocketClient extends Component<{}, { msg: string }> {
+    constructor(props) {
+        super(props);
+        this.state = {
+            msg: '服务器未连接',
+        };
+    }
+    log(msg) {
+        this.setState({ msg });
+    }
     /** 连接WebSocket服务器 */
     connect = (event: SyntheticEvent) => {
-        console.log('?');
         let conn = new WebSocket(ws);
-        console.log(conn);
-        conn.onopen = ev => {
-            console.log(ev);
-            console.log('已连接');
+        this.log('连接服务器...');
+        conn.onopen = (ev: Event)=> {
+            this.log('服务器已连接...');
+        };
+        conn.onerror = (ev: Event) => {
+            this.log('连接失败！');
+        };
+        conn.onmessage = (ev: MessageEvent) => {
+            this.log('服务器: ' + ev.data);
         };
     };
     render() {
         return (
             <div style={{
-                position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)',
+                position: 'absolute', left: '50%', top: '40%', transform: 'translate(-50%, -50%)',
             }}>
-                {/* <Button onClick={event => this.connect(event)}>连接服务器</Button> */}
+                <div style={{ textAlign: 'center', fontSize: '28px', paddingBottom: '20px', }}>{this.state.msg}</div>
                 <Button onClick={this.connect}>连接服务器</Button>
             </div>
         );
