@@ -3,6 +3,7 @@ import { lazy, LazyExoticComponent } from "react";
 const parts = [
     [
         'WebSocket',
+        'Base64',
     ],
 ];
 

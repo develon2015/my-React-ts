@@ -24,10 +24,10 @@ const CONFIG = {
             {
                 test: /\.(js|tsx?)$/, exclude: /node_modules/, use: {
                     loader: 'babel-loader',
-                    options: {
-                        plugins: ['@babel/plugin-proposal-class-properties'],
-                        presets: ['@babel/env', '@babel/react', '@babel/typescript'],
-                    }
+                    // options: {
+                        // plugins: ['@babel/plugin-proposal-class-properties'],
+                        // presets: ['@babel/env', '@babel/react', '@babel/typescript'],
+                    // }
                 }
             }, // Babel
         ],

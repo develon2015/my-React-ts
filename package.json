@@ -6,8 +6,8 @@
   "scripts": {
     "build": "webpack --config webpack.config.js --env.production",
     "rebuild": "webpack --config webpack.config.js --env.production --env.rebuild",
-    "dev:local": "webpack-dev-server --open --env.localhost",
-    "dev": "webpack-dev-server --open"
+    "start:dev:local": "webpack-dev-server --open --env.localhost",
+    "start:dev": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
