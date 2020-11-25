@@ -6,6 +6,10 @@ const parts = [
         'Base64',
         'Base64性能测试',
     ],
+    [
+        'Hook',
+        'call&apply',
+    ],
 ];
 
 /** 页面名称 */

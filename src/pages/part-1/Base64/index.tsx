@@ -94,6 +94,9 @@ export default () => {
             style={{ textAlign: 'center', }}
         >
             <App />
+            <div style={{ marginTop: '200px' }}>
+                <h3>说明：“受限”表示来自MDN的解决方案是有限制的，但已被修复</h3>
+            </div>
         </div>
     );
 };
