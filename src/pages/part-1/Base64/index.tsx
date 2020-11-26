@@ -65,6 +65,10 @@ class App extends Component<{}, { msg: string, objectURL: string}> {
         };
     }
     input = createRef<HTMLInputElement>();
+    input_base64 = createRef<HTMLInputElement>();
+    inputBase64 = () => {
+        this.setState({ msg: this.input_base64.current.value });
+    };
     render() {
         return (
             <div>
@@ -79,6 +83,8 @@ class App extends Component<{}, { msg: string, objectURL: string}> {
                 </div>
                 <div>{ this.state.objectURL} </div>
                 <hr />
+                <input placeholder="要解码的Base64" ref={this.input_base64} style={{ fontSize: '28px', width: '50vw' }} onChange={this.inputBase64}></input>
+                <br />
                 <Button onClick={this.saveAsFile}>解码二进制并保存为文件</Button><br />
                 <Button onClick={this.decodeUTF8}>解码UTF-8字符串</Button><br />
                 <Button onClick={this.decodeUTF16}>解码UTF-16LE字符串（受限的）</Button><br />
