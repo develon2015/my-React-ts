@@ -9,6 +9,7 @@ const parts = [
     [
         'Hook',
         'call&apply',
+        'ES6',
     ],
 ];
 
