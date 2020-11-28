@@ -1,5 +1,5 @@
 import { Component, SyntheticEvent } from 'react';
-const css = require('./style.css');
+import css from './style.css';
 import Button from '@/components/Button';
 
 const ws = `ws://127.0.0.1:8022`;

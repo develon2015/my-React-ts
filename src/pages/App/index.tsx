@@ -1,5 +1,6 @@
 import { HashRouter as Router, Switch, Route, Link, useHistory, } from 'react-router-dom';
-const css = require('./style.css'); // css模块由loader处理，类型丢失，据说可以使用typings-for-css-modules-loader
+// const css = require('./style.css'); // css模块由loader处理，类型丢失，据说可以使用typings-for-css-modules-loader
+import css from './style.css';
 import Index from '@/pages/Index';
 import Title from '@/components/Title';
 import Button from '@/components/Button';
