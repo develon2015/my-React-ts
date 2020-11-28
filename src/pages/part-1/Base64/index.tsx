@@ -1,8 +1,8 @@
 import * as web from '@develon/js/lib/web';
 import Button from '@/components/Button';
-import { Component, createRef } from 'react';
+import * as React from 'react';
 
-class App extends Component<{}, { msg: string, objectURL: string}> {
+class App extends React.Component<{}, { msg: string, objectURL: string}> {
     decodeUTF8 = () => {
         let decode = web.encode.a2b(this.state.msg);
         this.setState({
@@ -64,10 +64,9 @@ class App extends Component<{}, { msg: string, objectURL: string}> {
             objectURL: '',
         };
     }
-    input = createRef<HTMLInputElement>();
-    input_base64 = createRef<HTMLInputElement>();
-    inputBase64 = () => {
-        this.setState({ msg: this.input_base64.current.value });
+    input = React.createRef<HTMLInputElement>();
+    inputBase64 = (ev: React.ChangeEvent<HTMLInputElement>) => {
+        this.setState({ msg: ev.target.value });
     };
     render() {
         return (
@@ -83,7 +82,7 @@ class App extends Component<{}, { msg: string, objectURL: string}> {
                 </div>
                 <div>{ this.state.objectURL} </div>
                 <hr />
-                <input placeholder="要解码的Base64" ref={this.input_base64} style={{ fontSize: '28px', width: '50vw' }} onChange={this.inputBase64}></input>
+                <input placeholder="要解码的Base64" value={this.state.msg} style={{ fontSize: '28px', width: '50vw' }} onChange={this.inputBase64}></input>
                 <br />
                 <Button onClick={this.saveAsFile}>解码二进制并保存为文件</Button><br />
                 <Button onClick={this.decodeUTF8}>解码UTF-8字符串</Button><br />

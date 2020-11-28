@@ -26,6 +26,7 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.12.1",
+    "@develon/js": "^1.0.5",
     "@react-pdf/renderer": "^1.6.12",
     "@types/react": "^16.9.56",
     "babel-loader": "^8.1.0",
@@ -39,8 +40,5 @@
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
-  },
-  "dependencies": {
-    "@develon/js": "^1.0.5"
   }
 }
