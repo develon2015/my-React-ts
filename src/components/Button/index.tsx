@@ -1,10 +1,12 @@
-import { Component, } from 'react';
+import * as React from 'react';
 import css from './style.css';
 
-export default class extends Component {
-    constructor(props) {
-        super(props);
-    }
+interface ButtonProps {
+    color?: string;
+    onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+}
+
+export default class extends React.Component<ButtonProps, {}> {
     render() {
         return (
             <div className={css.button} onClick={this.props.onClick}

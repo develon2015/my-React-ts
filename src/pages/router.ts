@@ -12,6 +12,9 @@ const parts = [
         'call&apply',
         'ES6',
     ],
+    [
+        'WhatsRedux',
+    ],
 ];
 
 /** 页面名称 */
